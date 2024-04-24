@@ -16,7 +16,8 @@ local plugins = {
         "clangd",
         "clang-format",
         "rustaceanvim",
-        "lsp-inlayhints"
+        "lsp-inlayhints",
+        "cmake-tools"
       },
     },
   },
@@ -28,6 +29,10 @@ local plugins = {
     config = function ()
       require("telescope").load_extension("ui-select")
     end
+  },
+  { 
+    "Civitasv/cmake-tools.nvim",
+    dependencies = "nvim-lua/plenary.nvim"
   },
   {
     "David-Kunz/gen.nvim",

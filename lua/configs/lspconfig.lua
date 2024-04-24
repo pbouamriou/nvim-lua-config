@@ -23,11 +23,11 @@ lspconfig.tsserver.setup {
   capabilities = capabilities,
 }
 
--- lspconfig.rust_analyzer.setup {
---   on_attach = on_attach,
---   on_init = on_init,
---   capabilities = capabilities,
--- }
+lspconfig.cmake.setup {
+  on_attach = on_attach,
+  on_init = on_init,
+  capabilities = capabilities,
+}
 
 lspconfig.clangd.setup{
   on_attach = function(client, bufnr)
