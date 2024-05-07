@@ -17,7 +17,8 @@ local plugins = {
         "clang-format",
         "rustaceanvim",
         "lsp-inlayhints",
-        "cmake-tools"
+        "cmake-tools",
+        "buf-language-server"
       },
     },
   },
@@ -25,12 +26,15 @@ local plugins = {
     "lvimuser/lsp-inlayhints.nvim"
   },
   {
+    "bufbuild/buf-language-server"
+  },
+  {
     "nvim-telescope/telescope-ui-select.nvim",
     config = function ()
       require("telescope").load_extension("ui-select")
     end
   },
-  { 
+  {
     "Civitasv/cmake-tools.nvim",
     dependencies = "nvim-lua/plenary.nvim"
   },

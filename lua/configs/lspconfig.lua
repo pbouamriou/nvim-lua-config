@@ -23,12 +23,21 @@ lspconfig.tsserver.setup {
   capabilities = capabilities,
 }
 
+-- cmake
 lspconfig.cmake.setup {
   on_attach = on_attach,
   on_init = on_init,
   capabilities = capabilities,
 }
 
+-- proto
+lspconfig.bufls.setup {
+  on_attach = on_attach,
+  on_init = on_init,
+  capabilities = capabilities,
+}
+
+-- C / C++
 lspconfig.clangd.setup{
   on_attach = function(client, bufnr)
     client.server_capabilities_signatureHelpProvider = false
@@ -36,6 +45,7 @@ lspconfig.clangd.setup{
   end,
   on_init = on_init,
   capabilities = capabilities,
+  filetypes = { 'cpp', 'cc', 'h', 'hpp', 'cxx', 'c'}
 }
 
 vim.api.nvim_create_augroup("LspAttach_inlayhints", {})
